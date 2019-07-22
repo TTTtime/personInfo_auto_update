@@ -36,11 +36,12 @@
 		</td>
 		<td class="ts"> 程序支持的主功能，下载与更新，模式二选一 </td>
 		</tr>
+		{%if configs_dict.download_dir %}
 		<tr>
 		<td class="th">download_dir:</td>
-		{%if configs_dict.download_dir %}
 		<td><input type="text" name="download_dir" value={{configs_dict.download_dir}}/></td>
 		</tr>
+		 {% endif %}
 		<tr>
 		<td class="th">download_dir_start_num:</td>
 		<td><input type="text" name="download_dir_start_num" /></td>
