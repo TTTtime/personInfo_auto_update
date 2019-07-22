@@ -3,6 +3,7 @@
 from flask import Flask
 from flask import render_template
 from flask import request
+import json
 
 app = Flask(__name__)
 
@@ -18,15 +19,22 @@ def get_html():
 def post_html():
     return render_template('post.html')
 
-@app.route('/main/deal_request/', methods = ['GET', 'POST'])
+@app.route('/main/deal_request', methods = ['GET', 'POST'])
 def deal_request():
+    test = request
+    return_dict = {}
     if request.method == "GET":
-        test = request
         get_q = request.args.get("q","")
         return render_template("result.html", result=get_q)
     elif request.method == "POST":
-        post_q = request.form["q"]
-        return render_template("result.html", result=post_q)
+        return_dict['function'] = request.form["function"]
+        return_dict['download_dir'] = request.form["download_dir"]
+        return_dict['download_dir_start_num'] = request.form["download_dir_start_num"]
+        return_dict['download_pic_group'] = request.form["download_pic_group"]
+        return_dict['download_start'] = request.form["download_start"]
+        return_dict['download_end'] = request.form["download_end"]
+        return_dict['download_type'] = request.form["download_type"]
+        return json.dumps(return_dict)
 
 if __name__ == '__main__':
-    app.run(host='172.16.231.220', port=5000, debug=True)
+    app.run(host='127.0.0.1', port=5000, debug=True)
