@@ -31,55 +31,55 @@
 		<tr>
 		<td class="th">function:</td>
 		<td>
-		<input type="radio" name="function" value="update">update 
+		<input type="radio" name="function" value="update" checked required/>update 
 		<input type="radio" name="function" value="download">download
 		</td>
 		<td class="ts"> 程序支持的主功能，下载与更新，模式二选一 </td>
 		</tr>
 		<tr>
 		<td class="th">download_dir:</td>
-		{<td><input type="text" name="download_dir" /></td>
+		<td><input type="text" name="download_dir" required/></td>
 		</tr>
 		<tr>
 		<td class="th">download_dir_start_num:</td>
-		<td><input type="text" name="download_dir_start_num" /></td>
+		<td><input type="text" name="download_dir_start_num" required/></td>
 		</tr>
 		<tr>
 		<td class="th">download_pic_group:</td>
-		<td><input type="text" name="download_pic_group" /></td>
+		<td><input type="text" name="download_pic_group" required/></td>
 		</tr>
 		<tr>
 		<td class="th">download_start:</td>
-		<td><input type="text" name="download_start" /></td>
+		<td><input type="text" name="download_start" required/></td>
 		</tr>
 		<tr>
 		<td class="th">download_end:</td>
-		<td><input type="text" name="download_end" /></td>
+		<td><input type="text" name="download_end" required/></td>
 		</tr>
 		<tr>
 		<td class="th">download_type:</td>
-		<td><select id="download_type" class="select" >
-			<option value="oracle" selected>oracle</option>
-			<option value="mysql" >mysql</option>
-			</select>
+		<td>
+		<input type="radio" name="download_type" value="oracle" checked required/>oracle 
+		<input type="radio" name="download_type" value="mysql">mysql
 		</td>
 		</tr>
 		<tr>
-		<td class="th">full_update:</td>
-		<td><input type="radio" name="on_off" value="on">on 
-			<input type="radio" name="on_off" value="off">off
+		<td class="th" >full_update:</td>
+		<td>
+		<input type="radio" name="on_off" value="on">on 
+		<input type="radio" name="on_off" value="off">off
 		</td>
 		</tr>
 		<tr>
-		<td class="th">redis_ip:</td>
+		<td class="th" >redis_ip:</td>
 		<td><input type="text" name="redis_ip" /></td>
 		</tr>
 		<tr>
-		<td class="th">redis_pwd:</td>
+		<td class="th" >redis_pwd:</td>
 		<td><input type="password" name="redis_pwd"></td>
 		</tr>
 		<tr>
-		<td class="th">update_source:</td>
+		<td class="th" >update_source:</td>
 		<td><input type="text" name="update_source" /></td>
 		</tr>
 		<tr>

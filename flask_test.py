@@ -34,7 +34,7 @@ def deal_request():
         return_dict['download_start'] = request.form["download_start"]
         return_dict['download_end'] = request.form["download_end"]
         return_dict['download_type'] = request.form["download_type"]
-        return json.dumps(return_dict)
+        return render_template("post_rsp.html", configs_dict=return_dict)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000, debug=True)
